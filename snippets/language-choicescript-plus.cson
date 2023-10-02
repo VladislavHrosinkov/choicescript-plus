@@ -57,8 +57,8 @@
     *if ${1:cond}
         TEXT1
     """
-  'ife':
-    'prefix': 'ife'
+  'ifelse':
+    'prefix': 'ifelse'
     'body': """
     *if ${1:cond}
         TEXT1
