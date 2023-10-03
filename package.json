@@ -1,6 +1,6 @@
 {
   "name": "language-choicescript-plus",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Choicescript language support in Atom",
   "engines": {
     "atom": "*"
@@ -8,7 +8,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/VladislavHrosinkov/language-choicescript-plus.git"
+    "ssh": "git@github.com:VladislavHrosinkov/language-choicescript-plus.git"
   },
   "bugs": {
     "url": "https://github.com/VladislavHrosinkov/language-choicescript-plus/issues"
