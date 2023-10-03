@@ -3,42 +3,83 @@
 'fileTypes': ['txt']
 
 'patterns': [
-  {
-    'match': '(\\*(scene_list|page_break|line_break|choice|finish|label|goto|goto_scene|gosub|gosub_scene|return|ending|image|if|else|elseif|temp|stat_chart|rand|input_number|fake_choice|allow_reuse|hide_reuse|disable_reuse))\\b'
+    {
+    'match': '(\\*(allow_reuse|check_achievements|choice|disable_reuse|else|ending|fake_choice|finish|goto_random_scene|hide_reuse|line_break|more_games|page_break|return|scene_list|share_this_game|show_password|restore_game|stat_chart))\\b'
     'name': 'entity.name.function.choicescript'
-  },
-{
-  'match': '(\\*(allow_reuse|achievement|check_achievements|achieve|params))'
-  'name': 'entity.name.function.choicescript'
-},
-  {
-    'match': '(\\*title)\\s+(.+)'
+    },
+    {
+    'match': '(\\*(if|elseif|elsif|selectable_if))\\b'
+    'name': 'entity.name.function.choicescript'
+    },
+    {
+    'match': '(\\*script)\\b'
+    'name': 'entity.name.function.choicescript'
+    },
+    {
+    'match': '(round\\()([0-9]+)(\\))'
+    'name': 'entity.name.function.choicescript'
+    'captures':
+        '1':
+            'name': 'entity.name.function.choicescript'
+        '2':
+            'name': 'constant.numeric.choicescript'
+        '3':
+            'name': 'entity.name.function.choicescript'
+    },
+    {
+    'match': '(round\\()([a-zA-Z_]+)(\\))'
+    'name': 'entity.name.function.choicescript'
+    'captures':
+        '1':
+            'name': 'entity.name.function.choicescript'
+        '2':
+            'name': 'keyword.control.choicescript'
+        '3':
+            'name': 'entity.name.function.choicescript'
+    },
+    {
+    'match': '(\\*(params|label|goto|goto_scene|goto|gotoref|gosub|gosub_scene|print|setref)\\s+(.+))'
+    'captures':
+        '1':
+            'name': 'entity.name.function.choicescript'
+        '2':
+            'name': 'entity.name.function.choicescript'
+        '3':
+            'name': 'keyword.control.choicescript'
+    'name': 'entity.name.function.choicescript'
+    },
+    {
+    'match': '(\\*(achieve|achievement|allow_reuse|author|bug|image|link|sound|title))\\s+(.+)'
     'captures':
         '1':
             'name': 'entity.name.function.choicescript'
         '2':
             'name': 'string.unquoted'
-    'name': 'meta.title.choicescript'
-  },
-  {
-    'match': '(\\*author)\\s+(.+)'
+    'name': 'meta.function.choicescript'
+    },
+    {
+    'match': '(\\*(create|delete|set|temp|input_number|input_txt|rand))\\s+(\\w+)\\s+(.*)'
     'captures':
         '1':
             'name': 'entity.name.function.choicescript'
         '2':
-            'name': 'string.unquoted'
-    'name': 'meta.author.choicescript'
-  },
-  {
-    'match': '(\\*link)\\s+(.+)'
+            'name': 'entity.name.function.choicescript'
+        '3':
+            'name': 'keyword.control.choicescript'
+        '4':
+            'name': 'constant.numeric.choicescript'
+    'name': 'meta.function.choicescript'
+    },
+    {
+    'match': '(\\*looplimit)\\s+([0-9]*)'
     'captures':
         '1':
             'name': 'entity.name.function.choicescript'
         '2':
-            'name': 'string.unquoted'
-    'name': 'meta.link.choicescript'
-  },
-  {
+            'name': 'constant.numeric.choicescript'
+    'name': 'meta.function.choicescript'
+    },
+    {
     'match': '(\\#)(.+)'
     'captures':
         '1':
@@ -46,32 +87,28 @@
         '2':
             'name': 'string.unquoted'
     'name': 'meta.option.choicescript'
-  },
-  {
+    },
+    {
+    'match': '(\\@\\{)'
+    'captures':
+        '1':
+            'name': 'entity.name.function.choicescript'
+        '2':
+            'name': 'string.unquoted'
+        '3':
+            'name': 'entity.name.function.choicescript'
+        '4':
+            'name': 'string.unquoted'
+        '5':
+            'name': 'entity.name.function.choicescript'
+    'name': 'meta.multireplace.choicescript'
+    },
+    {
+    'match': '(\\||\\})'
+    'name': 'entity.name.function.choicescript'
+    },
+    {
     'match': '(\\*comment.*$)'
     'name': 'comment.line.choicescript'
-  },
-  {
-    'match': '(\\*create)\\s+(\\w+)\\s+(.+)'
-    'captures':
-        '1':
-            'name': 'entity.name.function.choicescript'
-        '2':
-            'name': 'keyword.control.choicescript'
-        '3':
-            'name': 'constant.numeric.choicescript'
-    'name': 'meta.create.choicescript'
-  },
-  {
-    'match': '(\\*set)\\s+(\\w+)\\s+(.+)'
-    'captures':
-        '1':
-            'name': 'entity.name.function.choicescript'
-        '2':
-            'name': 'keyword.control.choicescript'
-        '3':
-            'name': 'constant.numeric.choicescript'
-    'name': 'meta.set.choicescript'
-  }
-
+    }
 ]
