@@ -1,6 +1,3 @@
 #Atom plugin for Choicescript
 
-[![Build Status](https://travis-ci.org/kingsleyh/language-choicescript.png?branch=master)](https://travis-ci.org/kingsleyh/language-choicescript)
-
-![choicescript highlighting]
-(https://github.com/kingsleyh/language-choicescript/raw/master/.README/choicescript1.jpg)
+A fork of language-choicescrpt with improved highlighting and an increased collection of snippets.
